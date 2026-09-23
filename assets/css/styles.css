@@ -40,8 +40,7 @@ h1, h2, h3 { line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; color
 h1 { font-size: clamp(2.6rem, 5.4vw, 4rem); line-height: 1.08; }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
 h3 { font-size: 1.35rem; }
-.h1-lead { display: block; font-size: 0.55em; font-weight: 500; margin-bottom: 0.35em; }
-.accent { color: var(--green); }
+.h1-lead { display: block; font-size: 0.55em; font-weight: 500; margin-bottom: 0.35em; color: var(--green); }
 p { margin-bottom: 1rem; }
 a { color: var(--brown); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -185,14 +184,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     box-shadow: var(--shadow-sm);
 }
 .carousel-container { position: relative; width: 100%; overflow: hidden; display: grid; }
-.carousel-slide { grid-area: 1 / 1; width: 100%; text-align: center; padding: 1rem 1rem 0.5rem; visibility: hidden; }
+.carousel-slide { grid-area: 1 / 1; align-self: center; width: 100%; text-align: center; padding: 1rem 1rem 0.5rem; visibility: hidden; }
 .carousel-slide.active { visibility: visible; }
 .carousel-slide img {
-    height: clamp(240px, 48vw, 600px); width: 100%;
-    object-fit: contain; margin: 0 auto; border-radius: var(--radius-lg);
+    max-height: 600px; width: auto; max-width: 100%;
+    margin: 0 auto; border-radius: var(--radius-lg);
     cursor: zoom-in;
 }
-.caption { margin: 0.9rem auto 0.5rem; color: var(--ink-soft); font-size: 1rem; max-width: 640px; min-height: 2.7em; }
+.caption { margin: 0.9rem auto 0.5rem; color: var(--ink-soft); font-size: 1rem; max-width: 640px; }
 
 .carousel-btn {
     position: absolute; top: 50%; transform: translateY(-50%);
@@ -275,7 +274,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     .mission-inner { border-radius: var(--radius-lg); }
     .carousel { border-radius: var(--radius-lg); }
     .carousel-slide { padding: 0.6rem 0.6rem 0.25rem; }
-    .carousel-slide img { height: clamp(220px, 60vw, 420px); border-radius: var(--radius-md); }
+    .carousel-slide img { max-height: 420px; border-radius: var(--radius-md); }
     .carousel-btn { width: 40px; height: 40px; font-size: 1.6rem; }
     .carousel-btn.prev { left: 0.5rem; }
     .carousel-btn.next { right: 0.5rem; }
