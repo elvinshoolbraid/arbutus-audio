@@ -3,162 +3,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elvin Shoolbraid's engineering project portfolio featuring Arbutus-1 music production device and Mobile Arm Support project">
+    <title>Arbutus Audio</title>
+    <meta name="description" content="Arbutus-1: an affordable, repairable, open portable synthesizer, sampler and 4-track recorder, built by one person in British Columbia. Development log and mission.">
     <meta name="author" content="Elvin Shoolbraid">
-    <title>Elvin Shoolbraid - Project Portfolio </title>
+    <meta property="og:title" content="Arbutus Audio">
+    <meta property="og:description" content="A portable synthesizer, sampler and 4-track recorder. Easy to start, impossible to outgrow, yours forever.">
+    <meta property="og:image" content="https://arbutus.audio/assets/images/log/hero.jpg">
+    <meta property="og:url" content="https://arbutus.audio/">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h4>Elvin Shoolbraid - Project Portfolio</h4>
+
+    <header class="site-header">
+        <a class="brand" href="#top">
+            <img class="brand-mark" src="assets/images/logo.svg" alt="" width="44" height="44">
+            <span class="brand-name">Arbutus Audio</span>
+        </a>
+        <nav class="site-nav" aria-label="Site">
+            <a href="#mission">Mission</a>
+            <a href="#log">Log</a>
+            <a href="#updates">Updates</a>
+        </nav>
     </header>
 
-    <!-- Introduction Section -->
-    <section class="intro-section">
-        <h1>Project Portfolio</h1>
-        <p class="description">This page hosts visual documentation for past and present, personal and professional projects. I hope to demonstrate hands-on experience in design and engineering, and a willingness to learn multidisciplinary skills.</p>
-    </section>
+    <main id="top">
 
-    <!-- Portable Music Production Device Section -->
-    <section class="arbutus-section">
-        <h2>Portable Music Production Device</h2>
-
-        <!-- Carousel 1: Concept Designs -->
-        <div class="carousel" id="carousel-concept">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/concept-1.jpg" alt="Early experimental concept design">
-                    <p class="caption">Early experimental concept design, not at all final</p>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">Arbutus-1</p>
+                <h1>A music studio in your backpack.</h1>
+                <p class="lede">A portable synthesizer, sampler and four-track recorder. Easy to start, impossible to outgrow, yours forever.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#mission">Read the mission</a>
+                    <a class="btn btn-ghost" href="#log">See the log</a>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/concept-2.jpg" alt="Experimental chassis concept design">
-                    <div class="caption">
-                        <h4>Experimental chassis concept design</h4>
-                        <p>Excessive complexity and assembly difficulty</p>
+            </div>
+            <figure class="hero-image">
+                <img src="assets/images/log/hero.jpg" alt="The Arbutus-1 look-alike model lying in grass: a beige keyboard with an orange-brown base and four coloured knobs" width="2000" height="1500" fetchpriority="high">
+                <figcaption>Look-alike model, September 2026. Printed PETG, no electronics inside yet.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Mission -->
+        <section class="mission" id="mission">
+            <div class="mission-inner">
+                <h2>The one-minute version</h2>
+                <p>Arbutus-1 is a portable synthesizer, sampler and four-track recorder: a two-octave keyboard, four knobs, a small screen, a microphone, a speaker and a battery, in a printed shell about the size of a paperback. You can make a finished piece of music on it, start to end, with nothing else.</p>
+                <p>I'm building it because the device that does this best, the OP-1 Field, costs about $2,800 CAD, is glued shut, and runs software nobody outside the company can change. Cheaper devices drop the multitrack recording that makes the OP-1 worth owning. None of that is a technical necessity; it is a set of business choices, and I think a small company can make different ones.</p>
+
+                <ul class="pillars">
+                    <li>
+                        <span class="pillar-mark pillar-green"></span>
+                        <div>
+                            <h3>Under $500 CAD</h3>
+                            <p>Off-the-shelf compute, small-batch circuit boards, a 3D-printed enclosure made close to the customer, sold direct. Most of the price of the incumbents is not parts.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="pillar-mark pillar-brown"></span>
+                        <div>
+                            <h3>Made to be opened</h3>
+                            <p>Bolts, not glue. Print files, board files and repair guides published. Spare parts sold at fair prices. A device you can fix is a device that stays out of the landfill.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="pillar-mark pillar-green"></span>
+                        <div>
+                            <h3>Open hardware and software</h3>
+                            <p>Synth engines, effects and sequencers are plugins. Anyone can write one and share it, and the best community work can ship in the base product.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="pillar-mark pillar-brown"></span>
+                        <div>
+                            <h3>Nothing else on it</h3>
+                            <p>No feed, no notifications, no forty hours of tutorials first. Every key is labelled and a HELP button explains whatever you are holding. It is built for the twenty minutes you already have, and for finishing things rather than collecting half-started ones.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <p>Where it stands: one fully validated circuit board, a look-alike model, and a playable emulator of the operating system. The next board is being designed now. I'm one person, a mechanical engineering student at the University of Victoria, with an industrial designer as a mentor and a lot of help from AI coding tools. The log below is the whole story, newest first.</p>
+
+                <div class="contact-row">
+                    <div class="contact-card">
+                        <h3>Want to contribute?</h3>
+                        <p>Audio DSP, embedded Linux, small-batch electronics manufacturing, a first production run, or early testing. Or you just want one.</p>
+                        <a class="btn btn-primary" href="mailto:elvin@arbutus.audio">elvin@arbutus.audio</a>
+                    </div>
+                    <div class="contact-card" id="updates">
+                        <h3>Milestone updates</h3>
+                        <p>A few emails a year, only when something real happens. No newsletter cadence, no marketing.</p>
+                        <!-- Formspree endpoint -->
+                        <form class="signup" action="https://formspree.io/f/mgavyerz" method="POST">
+                            <label class="visually-hidden" for="email">Email address</label>
+                            <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                            <button class="btn btn-primary" type="submit">Keep me posted</button>
+                            <p class="signup-status" aria-live="polite"></p>
+                        </form>
                     </div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/concept-3.jpg" alt="Unibody chassis concept design">
-                    <div class="caption">
-                        <h4>Unibody chassis concept design</h4>
-                        <p>Potentially better design for manufacturing and assembly complexity</p>
+            </div>
+        </section>
+
+        <!-- Log -->
+        <section class="log" id="log">
+            <div class="log-head">
+                <h2>Development log</h2>
+                <p>Newest first. Click any photo to enlarge it.</p>
+            </div>
+
+            <!-- 2026-09 emulator -->
+            <article class="post">
+                <div class="post-meta"><span class="date">September 2026</span><span class="tag">Software</span></div>
+                <h3>ArbutusOS, running on a laptop</h3>
+                <div class="carousel" id="c-emulator">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/emulator.jpg" alt="Emulator window: the ArbutusOS TRACK page drawn inside a photo of the look-alike model, recording to track 3" loading="lazy">
+                            <p class="caption">The emulator. The screen is live, and the keys and knobs in the photo are clickable.</p>
+                        </div>
                     </div>
+                    <div class="carousel-indicators"></div>
                 </div>
-            </div>
-            <button class="carousel-btn prev" aria-label="Previous slide">◀</button>
-            <button class="carousel-btn next" aria-label="Next slide">▶</button>
-            <div class="carousel-indicators"></div>
-        </div>
-
-        <p class="description">This project aims to create an affordable, repairable and user-reconfigurable all-in-one music composition product. It will probably be called the Arbutus-1, featuring a 2-octave keyboard, 4 rotary encoders, a small LCD display with a colour-coded user interface navigable through various command-keys, an integrated microphone, audio I/O jacks, and USB to charge the integrated batteries or transfer data with an external computer. The intended use-cases include synthesizing custom sounds from scratch or sampling audio to play on the keyboard, adding audio effects, sequencing or recording performances to audio, and arranging multiple audio tracks to create musical compositions.</p>
-
-        <h3>Block diagram and Schematic</h3>
-
-        <!-- Carousel 2: Diagrams -->
-        <div class="carousel" id="carousel-diagram">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/diagram-1.jpg" alt="System-level Block Diagram">
-                    <p class="caption">System-level Block Diagram</p>
+                <div class="post-body">
+                    <p>The next circuit board will take weeks to design, order and bring up, and I wanted something people could play at Hollyhock this week. So the software went first. This is ArbutusOS running on my MacBook, drawn inside the photo of the look-alike model. The keys and knobs in the photo respond to the mouse, and a USB MIDI keyboard plays the synth.</p>
+                    <p>What's in it: a SYNTH page with several engines, a DRUM kit, a four-track TRACK page with tape-style recording, lift and drop, slicing and looping, a MIXER, a step sequencer, TEMPO with tap and click, live microphone sampling on INPUT, a HELP key that explains whatever you're holding, and FILE for saving projects. The audio engine is a native library the real device will run too, so this is not a mock-up of the software. It is the software, with around 280 automated tests and a screenshot harness that checks each page against a reference image.</p>
+                    <p>The method was new for me. I had Claude interview me, starting from the repository and the design documents, until every open question about the software had an answer, and that became the spec. Claude Opus then built the emulator over about ten days of sessions. What one person can build in a month has changed a lot in a year.</p>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/diagram-2.jpg" alt="Compute Board schematic">
-                    <p class="caption">Compute Board schematic</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/diagram-3.jpg" alt="Audio Board schematic">
-                    <p class="caption">Audio Board schematic</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/diagram-4.jpg" alt="Encoder Board schematic">
-                    <p class="caption">Encoder Board schematic</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/diagram-5.jpg" alt="Keyboard Matrix schematic">
-                    <p class="caption">Keyboard Matrix schematic</p>
-                </div>
-            </div>
-            <button class="carousel-btn prev" aria-label="Previous slide">◀</button>
-            <button class="carousel-btn next" aria-label="Next slide">▶</button>
-            <div class="carousel-indicators"></div>
-        </div>
+            </article>
 
-        <p class="description">The system level block diagram shows a multi-board design, with the Raspberry Pi CM4 (Compute Module) receiving user input through a microcontroller IC (chip), translating digital to analog audio and vice versa through an audio codec IC, and running an LCD for UI. An off-the-shelf BMS (Battery Management System) board is used to manage 3 series 21700 Li-ion batteries. Various power regulator ICs help take power input from the USB port for charging, supply the digital 5V components, and separately supply the sensitive analog audio circuitry to avoid digital noise.</p>
-
-        <h3>Layout, Micro-soldering and Debugging</h3>
-
-        <!-- Carousel 3: Layout -->
-        <div class="carousel" id="carousel-layout">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/layout-1.jpg" alt="Validation PCB layout">
-                    <p class="caption">Validation PCB layout</p>
+            <!-- 2026-09 look-alike -->
+            <article class="post">
+                <div class="post-meta"><span class="date">September 2026</span><span class="tag">Industrial design</span></div>
+                <h3>The look-alike</h3>
+                <div class="carousel" id="c-lookalike">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/lookalike-1.jpg" alt="Look-alike model in grass, three-quarter view from the left, showing the orange-brown base and beige top" loading="lazy">
+                            <p class="caption">Three PETG colours: beige top, bark-orange base, forest-green labels and one knob.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/lookalike-2.jpg" alt="Look-alike model in grass, three-quarter view from the right, showing the audio jacks on the end" loading="lazy">
+                            <p class="caption">Jacks and USB on the right end. The rear is taller to hold the batteries.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/lookalike-top.jpg" alt="Top-down photo of the look-alike model: 52 keys on a grid, four knobs, a blank screen" loading="lazy">
+                            <p class="caption">Top-down, as photographed for the emulator. Fifty-two keys on a uniform 16 mm grid.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/layout-2.jpg" alt="Keyboard and rotary encoder input section">
-                    <p class="caption">Keyboard and rotary encoder input section</p>
+                <div class="post-body">
+                    <p>Before the emulator, half a week on a model that looks like the product and does nothing. Three colours of Bambu Lab PETG that read as arbutus: bark, wood and leaf. Fifty-two keys on a uniform 16 mm grid, four encoders, and a screen cutout at the real display size.</p>
+                    <p>The keycaps are printed in the same filaments as the chassis with a 0.2 mm nozzle, with the label printed into the cap as a second colour. That was the real experiment. It worked far better than any other way I have found to label keys, which means pilot production can use printed caps, and probably the long run too. Still untested: the interlock between switch and keycap.</p>
+                    <p>What it settled: I like the layout and the count of controls enough to commit to them. The next board can use these key positions as its footprint, and the chassis only needs to change in depth once the real component heights are known. It also brought back a good deal of confidence after a stalled summer.</p>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/layout-3.jpg" alt="Power stages and analog audio section">
-                    <p class="caption">Power stages and analog audio section</p>
+            </article>
+
+            <!-- 2026-08 rescope -->
+            <article class="post">
+                <div class="post-meta"><span class="date">August 2026</span><span class="tag">Process</span></div>
+                <h3>One question per prototype</h3>
+                <div class="post-body">
+                    <p>Over the summer the project stalled. The second circuit board had grown into an attempt to answer everything at once: final component selection, a redone schematic, a split into several boards with untested ribbon connectors, a chassis designed around components I had never held, and a key layout for a user interface I had never used. Those variables all depend on each other, so no single build could converge on all of them, and there was not enough room in my head to solve them together. For a while I read that as a character problem. It was a scoping problem.</p>
+                    <p>Paul, my mentor, worked on Tickle Me Elmo at Mattel and pointed out that it went through nine prototypes. So I wrote out a ladder where each build answers exactly one question and freezes everything else as an assumption of record.</p>
+                    <ol class="ladder">
+                        <li><span class="rung done">P0</span><span>Loose dev boards on a bench. Can these parts talk at all?</span><span class="status">Done</span></li>
+                        <li><span class="rung done">P1</span><span>One big validation board. Does the whole signal chain run?</span><span class="status">Done</span></li>
+                        <li><span class="rung done">P2</span><span>Look-alike shell plus laptop emulator, as separate objects. Does the product read as desirable, and does the interface land in someone else's hands?</span><span class="status">Done</span></li>
+                        <li><span class="rung next">P3</span><span>A second monolithic board with all the new parts. Is the key layout right, and do the new components work?</span><span class="status">Next</span></li>
+                        <li><span class="rung">P4</span><span>Printed shell with dummy boards at true thickness. Does the stack physically assemble?</span><span class="status">After P3</span></li>
+                        <li><span class="rung">P5</span><span>The split-board build in a real chassis. Does the integrated product work as one unit?</span><span class="status">Parked</span></li>
+                        <li><span class="rung">P6+</span><span>Engineering, design and production validation builds, the standard gates before manufacturing.</span><span class="status">Later</span></li>
+                    </ol>
+                    <p>P3 is deliberately one board again, a mule. It carries the new parts: a three-cell battery management circuit with 21700 clips, a thinner Kailh key switch that takes about 6 mm off the device, MEMS microphones, a motion sensor, and ribbon connectors placed only so they can be tested. It also gets a 40-pin header so a Raspberry Pi Zero 2 or Pi 3 can be tried in place of the Compute Module 4. Early emulator measurements suggest the smaller computer may be enough, which could take about $100 off the bill of materials.</p>
+                    <p>The lesson I am trying to keep: when work stalls, ask what this prototype is actually trying to answer before asking whether to push harder.</p>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/layout-4.jpg" alt="Circuit board with some missing components">
-                    <p class="caption">Circuit board with some missing components</p>
+            </article>
+
+            <!-- 2026-03/04 V0.2 -->
+            <article class="post">
+                <div class="post-meta"><span class="date">March to April 2026</span><span class="tag">Electronics</span></div>
+                <h3>Splitting the board</h3>
+                <div class="carousel" id="c-v02">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r43.jpg" alt="Annotated encoder board schematic with rerouted programming lines, a new crystal, a top-contact display connector and a ribbon connector to the compute board" loading="lazy">
+                            <p class="caption">The encoder board's schematic for revision two, with every fix from the first board marked in red.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r44.jpg" alt="Pin tables for two 20-pin ribbon connectors, IO and encoder, each listing power and signal assignments" loading="lazy">
+                            <p class="caption">One connector type for every board-to-board link, to keep the part count down.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r45.jpg" alt="A large spreadsheet grid mapping every key and knob against every page of the user interface" loading="lazy">
+                            <p class="caption">The interaction matrix: what every key does on every page. The real DNA of the software.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/layout-5.jpg" alt="0.1mm bodge-wire on the CM4 connector">
-                    <p class="caption">0.1mm bodge-wire on the CM4 connector</p>
+                <div class="post-body">
+                    <p>With the first board proven, I started revision two as separate boards: compute, input and output, encoder, keyboard and battery, joined by 20-pin ribbon cables, each its own KiCad project so JLCPCB can build them separately. I found a 21700 battery clip that their assembly line can place by machine, and decided to design the battery management circuit onto that board rather than bolting a bought module in.</p>
+                    <p>I also started an interaction matrix, a spreadsheet of what every key does on every page, because software cannot be built from a vague description, by me or by anyone I hand it to. By late April the compute board schematic was done, the input and battery boards were drafted, and there was a set of mechanical design documents covering fasteners, keycap construction, a print cost model and chassis geometry.</p>
+                    <p>Then the summer happened. The post above this one is what came out of it.</p>
                 </div>
-                <div class="carousel-slide">
-                    <img src="assets/images/arbutus/layout-6.jpg" alt="ISP programming bodge-wires for the ATMega chip">
-                    <p class="caption">ISP programming bodge-wires for the ATMega chip</p>
+            </article>
+
+            <!-- 2026-03 validation complete -->
+            <article class="post">
+                <div class="post-meta"><span class="date">March 2026</span><span class="tag">Electronics</span></div>
+                <h3>Everything on the board works</h3>
+                <div class="carousel" id="c-valid">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r40.jpg" alt="Two green circuit boards side by side, joined by dozens of thin red wires, with an LCD lit up green on the second board" loading="lazy">
+                            <p class="caption">Eleven wires carry the display signals to the spare board's connector, reordered to undo a mirrored footprint.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r41.jpg" alt="Small LCD showing ArbutusOS v0.1 diagnostics: input connected, last key and encoder events, and four synth parameters" loading="lazy">
+                            <p class="caption">ArbutusOS v0.1, a diagnostic screen that shows every key press and knob turn.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r42.jpg" alt="Audacity spectrum of a recorded 440 Hz tone showing a tall fundamental and a series of decaying harmonic peaks" loading="lazy">
+                            <p class="caption">A 440 Hz tone sent out the headphone jack and recorded back through line-in.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
                 </div>
-            </div>
-            <button class="carousel-btn prev" aria-label="Previous slide">◀</button>
-            <button class="carousel-btn next" aria-label="Next slide">▶</button>
-            <div class="carousel-indicators"></div>
-        </div>
+                <div class="post-body">
+                    <p>The display finally came up. Soldering straight to the LCD's ribbon pads was unreliable, so I ran eleven wires to the display connector on the spare board instead, reordered to undo a mirrored connector in my design. With that, a diagnostic version of the operating system showed every key press and knob turn on screen.</p>
+                    <p>Line-in and headphone-out were tested with a 440 Hz round trip. The spectrum shows harmonic distortion from gain staging, not digital noise leaking into the audio path, so the analog layout can stay as it is.</p>
+                    <p>That closed electrical validation. Power, the Compute Module, the audio codec, the keyboard controller, the encoders and the display were all verified on the first board.</p>
+                </div>
+            </article>
 
-        <p class="description">The electrical validation board was laid out on a single board for simplicity, and no respect was payed to component location or aesthetics. Most SMD components were soldered by JLCPCB, and soldering with a microscopic 150x zoom camera was used to add the dual 100-pin snap connectors for the CM4, and to make bodge-wire fixes as pictured above. The current status is that power rails have been debugged and verified to work, the CM4 boots and communicates through USB, the audio codec chip can record and output, and the ATMega microcontroller IC has been flashed with firmware that scans the keyboard matrix and rotary encoder inputs. Once the LCD screen is made to work and electrical validation is complete, a new multi-board design can be laid out to fit within the chassis size constraints.</p>
-    </section>
+            <!-- 2026-02 ATmega -->
+            <article class="post">
+                <div class="post-meta"><span class="date">February 2026</span><span class="tag">Electronics</span></div>
+                <h3>Flashing the keyboard chip</h3>
+                <div class="carousel" id="c-isp">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r34.jpg" alt="Validation board with a ribbon programmer cable and a bundle of coloured wires soldered to tiny pads near the keyboard controller chip" loading="lazy">
+                            <p class="caption">Six programming wires on pads much smaller than I had pictured when I drew them.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r36.jpg" alt="Two circuit boards with a tangle of red wires between them, a logic analyser clipped on and an Arduino at the edge" loading="lazy">
+                            <p class="caption">Second board wired up in case the first chip was dead, with a logic analyser on the programming lines.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r38.jpg" alt="An Arduino injecting a clock signal into the keyboard chip via a thin wire, next to a Compute Module 4 lying on the board" loading="lazy">
+                            <p class="caption">An Arduino injecting a clock. The chip expected an external crystal that was never fitted.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r37.jpg" alt="Validation board with tester key switches installed, red display wires, and the Compute Module mounted" loading="lazy">
+                            <p class="caption">After the fix: tester key switches, the display on red wires, and the Compute Module doing the programming.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="post-body">
+                    <p>The ATmega microcontroller that scans the keyboard would not accept firmware. It turned out to be two faults at once: the chip was waiting for an external crystal I had not fitted, and the programmer was releasing the reset line too late to matter. Finding that took an Arduino injecting a clock signal, a second board wired up in case the first chip was dead, a logic analyser on the programming lines, and finally the Compute Module on the board itself doing the programming through 0.1 mm wires.</p>
+                    <p>Once it took, the encoders and the first key switches read correctly. Two lessons went in the log. Don't decide a chip is dead until you can prove it. And when an AI assistant contradicts itself on a datasheet detail, make it go and check, because that one cost a week.</p>
+                </div>
+            </article>
 
-    <!-- Mobile Arm Support Section -->
-    <section class="arm-support-section">
-        <h2>Mobile Arm Support Project</h2>
+            <!-- 2026-02 first UI + shell -->
+            <article class="post">
+                <div class="post-meta"><span class="date">February 2026</span><span class="tag">Software, mechanical</span></div>
+                <h3>First interface on a screen, and a two-piece shell</h3>
+                <div class="carousel" id="c-feb">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r30.jpg" alt="Emulator window showing SYNTH FM with four parameters, Ratio, Index, Attack and Release, on coloured bars" loading="lazy">
+                            <p class="caption">The first proof-of-concept interface, running on the Mac. Four parameters on the four knobs.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r31.jpg" alt="Emulator window with a SELECT ENGINE menu listing Oscillator, FM and Noise" loading="lazy">
+                            <p class="caption">Shift and a number opens the engine picker.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r33.jpg" alt="Dark green 3D-printed shell with a white inner tray, seen from the front edge with the display recess and knob holes visible" loading="lazy">
+                            <p class="caption">A new shell in two pieces and six bolts.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r32.jpg" alt="Underside of the green two-piece shell showing the battery bulge and the join line" loading="lazy">
+                            <p class="caption">The large nozzle used here left a rougher finish than PETG deserves. Later prints went back to a fine nozzle.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r28.jpg" alt="Close-up of coloured wires soldered to programming pads next to the keyboard controller chip, with a rotary encoder above" loading="lazy">
+                            <p class="caption">Meanwhile, the programming pads that would take the rest of the month.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="post-body">
+                    <p>While the keyboard chip was being fought with, I had Claude Code build a proof of concept of the software: a synth page with four parameters on the four knobs, an engine picker, and sound out, running on the Mac through a thin emulation layer. It proved that the libraries and architecture we had picked would work before anything ran on the device.</p>
+                    <p>Separately, a new enclosure printed in two pieces with six bolts, a big reduction from the previous shell, to find out how simple assembly could get. It still needed work on rigidity and on the surface finish from the large nozzle, but the direction held.</p>
+                </div>
+            </article>
 
-        <div class="image-grid">
-            <img src="assets/images/arm-support/view-1.jpg" alt="Mobile Arm Support - View 1">
-            <img src="assets/images/arm-support/view-2.jpg" alt="Mobile Arm Support - View 2">
-            <img src="assets/images/arm-support/view-3.jpg" alt="Mobile Arm Support - View 3">
-        </div>
+            <!-- 2026-01 board arrives -->
+            <article class="post">
+                <div class="post-meta"><span class="date">January 2026</span><span class="tag">Electronics</span></div>
+                <h3>The board arrives</h3>
+                <div class="carousel" id="c-jan">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r24.jpg" alt="Large green validation circuit board on a wooden desk, with three rotary encoders fitted and most small components already placed" loading="lazy">
+                            <p class="caption">Back from JLCPCB with the small parts placed. Encoders, jacks and key switches are mine to add.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r23.jpg" alt="Desk with a microscope camera on an arm, a monitor showing a magnified circuit board, a multimeter, hot air station and tools" loading="lazy">
+                            <p class="caption">The micro-soldering setup: microscope camera, hot air, paste, and a monitor to work from.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r25.jpg" alt="Three cylindrical lithium cells wired in series to a small battery management board on a piece of cardboard" loading="lazy">
+                            <p class="caption">Three 21700 cells and a management board. The pack read the right voltage first time.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r26.jpg" alt="Monitor showing a magnified view of tweezers placing a hair-thin copper wire onto a pin of a 100-pin connector" loading="lazy">
+                            <p class="caption">A 0.1 mm wire onto one pin of the Compute Module connector, for a connection the schematic missed.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r27.jpg" alt="A USB cable cut open with its wires soldered directly onto the board where the USB connector used to be" loading="lazy">
+                            <p class="caption">The USB connector had a short under it that would not clear, so a cable was spliced onto the pads instead.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="post-body">
+                    <p>The validation board came back over the holidays with most of the parts placed. I set up a microscope camera, hot air and paste, learned micro-soldering from a colleague who does it for a living, and fitted the two 100-pin connectors for the Compute Module 4. Twice, because one lifted off with the module and the other took a drop of solder somewhere it should not be.</p>
+                    <p>Three 21700 cells and a management board made the pack, and the 5 V and 3.3 V rails measured right. The Compute Module booted after a missing connection was bridged with 0.1 mm wire and a backwards diode was turned around. USB needed a cable spliced straight onto the pads. By the end of the month the audio codec was answering over I2C, with Claude Code diagnosing most of the problems from the terminal.</p>
+                </div>
+            </article>
 
-        <p class="description">At my first Co-op term during the summer of 2024, I iteratively designed and prototyped a mobile arm support that uses mechanical tension and cables to assist people with limited arm strength. I used Fusion 360 and FDM 3D printing for the prototype. More information can be found in <a href="assets/documents/Mobile-Arm-Support-Project-Summer-2024.pdf" target="_blank">this document</a>. The 3D scan below is interactive; drag to rotate, scroll to zoom.</p>
+            <!-- 2025-12 layout -->
+            <article class="post">
+                <div class="post-meta"><span class="date">December 2025</span><span class="tag">Electronics</span></div>
+                <h3>Laying out the validation board</h3>
+                <div class="carousel" id="c-layout">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r20.jpg" alt="KiCad layout of the full validation board: four encoders top left, a grid of key switch footprints below, audio jacks at right" loading="lazy">
+                            <p class="caption">The whole board. Encoders top left, keyboard matrix below, audio at the right edge.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r21.jpg" alt="Close-up of the layout around the keyboard controller chip and display connector" loading="lazy">
+                            <p class="caption">The keyboard controller and the display connector.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r22.jpg" alt="Close-up of the layout around the power converters, audio codec and jacks with labelled test pads" loading="lazy">
+                            <p class="caption">Power converters on the left, the audio codec and jacks on the right, test pads everywhere.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r13.jpg" alt="Split screen of KiCad: schematic on the left, a zoomed footprint of the keyboard controller chip on the right" loading="lazy">
+                            <p class="caption">Mid-migration from EasyEDA to KiCad.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="post-body">
+                    <p>The first board's job is to test the schematic, not to fit the product. So: one big board, no attention to where anything sits in a chassis, larger passive components so I can rework them by hand, test pads on every important trace, ground planes on both signal layers with stitching vias. I migrated from EasyEDA to KiCad on the way, following Phil's Lab's layout course, and ordered from JLCPCB in mid-December.</p>
+                </div>
+            </article>
 
-        <div class="iframe-container">
-            <iframe src="https://lumalabs.ai/embed/431611f4-7abb-4e69-83c9-bb7d136bd235?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=true&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false" class="responsive-iframe" width="100%" height="600" frameborder="0" title="Mobile Arm Support 3D Scan" style="border: none;"></iframe>
-        </div>
-    </section>
+            <!-- 2025-11 shell + Tectoria -->
+            <article class="post">
+                <div class="post-meta"><span class="date">November 2025</span><span class="tag">Industrial design</span></div>
+                <h3>A shell to hold, and Discover Tectoria</h3>
+                <div class="carousel" id="c-nov">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r15.jpg" alt="Hand holding a 3D-printed shell with a green lattice frame over a beige body, against autumn leaves" loading="lazy">
+                            <p class="caption">The size-and-shape model. A green lattice frame over a beige body.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r17.jpg" alt="Printed shell on a desk showing the keyboard cutout grid, display window and four knob holes" loading="lazy">
+                            <p class="caption">Top face with the key grid, display window and knob holes.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r16.jpg" alt="Side view of the shell held up outdoors, showing the taller rear section that houses the batteries" loading="lazy">
+                            <p class="caption">The rear step holds the batteries and tilts the panel toward you.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r14.jpg" alt="Fusion 360 model of the shell split into a green frame, a tan body and an orange-brown inner tray" loading="lazy">
+                            <p class="caption">The model in Fusion 360, three parts.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/concept-annotated.jpg" alt="Annotated concept render labelling the speaker, display, microphone, keyboard, batteries, audio jacks and USB port, with a length of 25 cm" loading="lazy">
+                            <p class="caption">The concept as explained at the expo.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r19.jpg" alt="Poster board with four panels: the concept, features, differentiators and next steps" loading="lazy">
+                            <p class="caption">The expo poster, adapted from a 90-second pitch deck.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="post-body">
+                    <p>A size-and-shape model, printed to take to Discover Tectoria, Victoria's technology expo: a 25 cm shell with the inclined display and a printed lattice inside. Talking to strangers about the project for a day produced the first mailing list, twelve people, and a few software contacts.</p>
+                    <p>It was also the fortnight I realised I had been massively overthinking the first circuit board. It did not need to pass emissions tests, survive static discharge, or be shaped like the product yet. A friend pointed that out, and layout went quickly afterwards.</p>
+                </div>
+            </article>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
+            <!-- 2025-10 multi-board + logo -->
+            <article class="post">
+                <div class="post-meta"><span class="date">October 2025</span><span class="tag">Electronics</span></div>
+                <h3>Multi-board, and the arbutus branch</h3>
+                <div class="carousel" id="c-oct">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r10.jpg" alt="Render of a green and brown keyboard mock-up with an inclined display and a small arbutus branch logo on the panel" loading="lazy">
+                            <p class="caption">New mock-up with an inclined display and the arbutus branch on the panel.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r8.jpg" alt="Block diagram with components grouped into an IO board, compute board, encoder board and keyboard board" loading="lazy">
+                            <p class="caption">The block diagram redrawn around four boards.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r9.jpg" alt="Schematic of the ATmega keyboard controller with an IO expander, four rotary encoders and board-to-board connectors" loading="lazy">
+                            <p class="caption">The keyboard controller with its new IO expander and board-to-board connectors.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r11.jpg" alt="Cleanly formatted audio schematic: microphone, audio codec, headphone output, USB port and a ribbon connector to the compute board" loading="lazy">
+                            <p class="caption">The audio sheet after reformatting for outside review.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r12.jpg" alt="Dark block diagram of the whole system with colour-coded power, data and audio connections" loading="lazy">
+                            <p class="caption">Block diagram, final form for the first board.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="post-body">
+                    <p>The schematic was reorganised into four boards joined by a single type of 20-pin ribbon connector, so there is one connector part to stock. A conflict surfaced: the external USB port and the keyboard controller both wanted the Compute Module's one USB pair. The fix was a serial link for the controller and an IO expander to free up its pins.</p>
+                    <p>A new mock-up got an inclined display and the arbutus branch that became the logo. I also built a 90-second pitch for the university's PitchIt competition, and made a deliberate decision to under-do circuit protection and interference filtering on the first version, since none of it affects whether the prototype works.</p>
+                </div>
+            </article>
+
+            <!-- 2025-09 start -->
+            <article class="post">
+                <div class="post-meta"><span class="date">September 2025</span><span class="tag">Start</span></div>
+                <h3>Block diagram, first schematics, first mock-up</h3>
+                <div class="carousel" id="c-sep">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r3.jpg" alt="Render of an early mock-up: a green panel with cream keys, an LCD, four coloured knobs and a speaker grille, in a brown body" loading="lazy">
+                            <p class="caption">The first mock-up, not to scale, to try colours and proportions.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r2.jpg" alt="Low angle render of the same early mock-up showing the key profiles and knobs" loading="lazy">
+                            <p class="caption">Same model from key height.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r1.jpg" alt="Block diagram of the whole system: Compute Module 4, audio codec, keyboard controller, LCD, batteries and power converters, with colour-coded connections" loading="lazy">
+                            <p class="caption">The first block diagram of every component and how it connects.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r4.jpg" alt="EasyEDA schematic sheet for the Compute Module 4 connector and the power converters" loading="lazy">
+                            <p class="caption">Compute and power, in EasyEDA.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r5.jpg" alt="EasyEDA schematic sheet for the audio codec, microphone, line-in and USB-C port" loading="lazy">
+                            <p class="caption">Audio and USB.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r6.jpg" alt="EasyEDA schematic sheet for the keyboard controller, four encoders and the display connector" loading="lazy">
+                            <p class="caption">Keyboard controller, encoders and display.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/log/r7.jpg" alt="EasyEDA schematic of the key switch matrix, dozens of switches and diodes in rows and columns" loading="lazy">
+                            <p class="caption">The key switch matrix.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+                    <button class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="post-body">
+                    <p>The start of an entrepreneurial co-op term at the University of Victoria, and the project on paper: a Raspberry Pi Compute Module 4, a WM8960 audio codec, an ATmega32U4 keyboard controller, a small LCD, three 21700 cells. Schematics in EasyEDA for audio, display, power and USB, then the keyboard matrix and encoders, chosen from parts JLCPCB can place so the boards arrive mostly assembled. A not-to-scale model to try aesthetics.</p>
+                    <p>Customer interviews began with Paul and a friend. The conclusion I took from a founder's talk at the innovation centre stuck: nothing useful comes back from customers until there is a thing to hold. So the goal became a working prototype first, and everything else after.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Enlarged image">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
         <div class="lightbox-content">
-            <button class="lightbox-btn prev" aria-label="Previous image">◀</button>
+            <button class="lightbox-btn prev" aria-label="Previous image">&#8249;</button>
             <div class="lightbox-inner">
                 <img id="lightbox-image" src="" alt="">
                 <div id="lightbox-caption" class="lightbox-caption"></div>
             </div>
-            <button class="lightbox-btn next" aria-label="Next image">▶</button>
+            <button class="lightbox-btn next" aria-label="Next image">&#8250;</button>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <h5>Elvin Shoolbraid - Project Portfolio</h5>
-        <p><strong>elvinshoolbraid@uvic.ca</strong></p>
-        <p><strong>©2026 by Elvin Shoolbraid.</strong></p>
+    <footer class="site-footer">
+        <img class="footer-mark" src="assets/images/logo.svg" alt="" width="56" height="56">
+        <p><strong>Arbutus Audio</strong> · Elvin Shoolbraid · <a href="mailto:elvin@arbutus.audio">elvin@arbutus.audio</a></p>
+        <p class="footer-fine">Made in British Columbia. ©2026 Elvin Shoolbraid.</p>
     </footer>
 
     <script src="assets/js/carousel.js"></script>

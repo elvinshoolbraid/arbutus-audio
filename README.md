@@ -1,48 +1,30 @@
-# Project Portfolio
+# arbutus.audio
 
-Personal engineering project portfolio showcasing hands-on design and engineering experience.
+The public site for Arbutus-1, a portable synthesizer, sampler and 4-track recorder.
+Static HTML, CSS and vanilla JavaScript, served by GitHub Pages from `main` at https://arbutus.audio.
 
-## Projects
+## Structure
 
-### Arbutus-1 Portable Music Production Device
-An affordable, repairable, and user-reconfigurable all-in-one music composition product featuring:
-- 2-octave keyboard
-- 4 rotary encoders
-- LCD display with color-coded UI
-- Integrated microphone and audio I/O
-- Raspberry Pi CM4 compute module
-- Custom PCB design with audio codec and power management
+- `index.html`: the whole site. Hero, one-minute mission, contact and signup, then the development log newest first.
+- `assets/css/styles.css`: three colour tokens at the top (`:root`): beige, brown, green, from the look-alike model. Everything else is a shade of those.
+- `assets/js/carousel.js`: carousels, lightbox and the signup form handler.
+- `assets/images/logo.svg`: the branch logo, converted from `logo.dxf`. Ring and branch in brown, leaves in green.
+- `assets/images/log/`: photos for the log, resized to 1600 px on the long edge. `r<N>.jpg` files came from the co-op bi-monthly report workbook, numbered by their order in it.
 
-### Mobile Arm Support Project
-A mobile arm support device designed during Co-op (Summer 2024) that uses mechanical tension and cables to assist people with limited arm strength. Created using Fusion 360 and FDM 3D printing.
+## Adding a log post
 
-## Technology Stack
+Copy any `<article class="post">` block in `index.html`, change the date pill, title, slides and text, and place it at the top of the `#log` section. A carousel with one slide needs no prev/next buttons. Captions live in the `.caption` element under each image and are reused by the lightbox.
 
-- **Frontend**: HTML5, CSS3, JavaScript (vanilla)
-- **Styling**: CSS Grid, Flexbox, responsive design
-- **Hosting**: GitHub Pages
-- **Interactive Elements**: Custom JavaScript carousel, Luma Labs 3D viewer
+## Signup form
 
-## Local Development
+The form posts to Formspree. Replace `YOUR_FORM_ID` in the form's `action` with the ID from formspree.io. Until then the form shows a note asking people to email instead.
 
-1. Clone the repository:
+## Local preview
+
 ```bash
-git clone https://github.com/ElvinScans/Project-Portfolio.git
-cd Project-Portfolio
+open index.html
 ```
-
-2. Open `index.html` in your browser:
-```bash
-start index.html
-```
-
-## Live Site
-
-Visit the portfolio at: [https://elvinscans.github.io/Project-Portfolio/](https://elvinscans.github.io/Project-Portfolio/)
 
 ## Contact
 
-**Elvin Shoolbraid**
-Email: elvinshoolbraid@uvic.ca
-
-©2026 by Elvin Shoolbraid.
+Elvin Shoolbraid, elvin@arbutus.audio
