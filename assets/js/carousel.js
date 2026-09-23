@@ -161,7 +161,7 @@ function initSignup() {
             });
             if (res.ok) {
                 form.reset();
-                status.textContent = 'Thanks. You will hear from me when something real happens.';
+                status.textContent = 'Thanks. You will hear from me when something cool happens.';
             } else {
                 status.textContent = 'That did not go through. Email elvin@arbutus.audio instead.';
             }

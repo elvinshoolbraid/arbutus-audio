@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -36,13 +36,8 @@
         <!-- Hero -->
         <section class="hero">
             <div class="hero-text">
-                <p class="eyebrow">Arbutus-1</p>
-                <h1>A music studio in your backpack.</h1>
-                <p class="lede">A portable synthesizer, sampler and four-track recorder. Easy to start, impossible to outgrow, yours forever.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="#mission">Read the mission</a>
-                    <a class="btn btn-ghost" href="#log">See the log</a>
-                </div>
+                <h1><span class="h1-lead">The <span class="accent">Arbutus-1</span>:</span> A music studio in your backpack.</h1>
+                <p class="lede">A portable synthesizer, sampler and four-track recorder. Easy to start, impossible to outgrow, designed to be open.</p>
             </div>
             <figure class="hero-image">
                 <img src="assets/images/log/hero.jpg" alt="The Arbutus-1 look-alike model lying in grass: a beige keyboard with an orange-brown base and four coloured knobs" width="2000" height="1500" fetchpriority="high">
@@ -53,9 +48,9 @@
         <!-- Mission -->
         <section class="mission" id="mission">
             <div class="mission-inner">
-                <h2>The one-minute version</h2>
+                <h2>The short version</h2>
                 <p>Arbutus-1 is a portable synthesizer, sampler and four-track recorder: a two-octave keyboard, four knobs, a small screen, a microphone, a speaker and a battery, in a printed shell about the size of a paperback. You can make a finished piece of music on it, start to end, with nothing else.</p>
-                <p>I'm building it because the device that does this best, the OP-1 Field, costs about $2,800 CAD, is glued shut, and runs software nobody outside the company can change. Cheaper devices drop the multitrack recording that makes the OP-1 worth owning. None of that is a technical necessity; it is a set of business choices, and I think a small company can make different ones.</p>
+                <p>I'm building it because making music should be approachable, and the tools mostly aren't. The device that does this best, the OP-1 Field, costs about $2,800 CAD, is glued shut, and runs software nobody outside the company can change. Cheaper devices drop the multitrack recording that makes it worth owning. Desktop software like Ableton is a spaceship cockpit with no direction in it. None of that is a technical necessity; it is a set of choices, and I think a small company can make different ones.</p>
 
                 <ul class="pillars">
                     <li>
@@ -76,29 +71,29 @@
                         <span class="pillar-mark pillar-green"></span>
                         <div>
                             <h3>Open hardware and software</h3>
-                            <p>Synth engines, effects and sequencers are plugins. Anyone can write one and share it, and the best community work can ship in the base product.</p>
+                            <p>Synth engines, effects and sequencers are plugins. Anyone can write one and share it, and the best community work can be incorporated into the base product.</p>
                         </div>
                     </li>
                     <li>
                         <span class="pillar-mark pillar-brown"></span>
                         <div>
-                            <h3>Nothing else on it</h3>
-                            <p>No feed, no notifications, no forty hours of tutorials first. Every key is labelled and a HELP button explains whatever you are holding. It is built for the twenty minutes you already have, and for finishing things rather than collecting half-started ones.</p>
+                            <h3>Approachable by design</h3>
+                            <p>The biggest barrier is intimidation. So the functions are printed on the keys, the software says what it is doing, and holding HELP explains whatever you are touching. A phone app with tutorial modes, and repair guides you can actually follow. Function first, without giving up the form.</p>
                         </div>
                     </li>
                 </ul>
 
-                <p>Where it stands: one fully validated circuit board, a look-alike model, and a playable emulator of the operating system. The next board is being designed now. I'm one person, a mechanical engineering student at the University of Victoria, with an industrial designer as a mentor and a lot of help from AI coding tools. The log below is the whole story, newest first.</p>
+                <p>Where it stands: one fully validated circuit board, a look-alike model, and a playable emulator of the operating system. The next board is being designed now. I'm one person, a mechanical engineering student at the University of Victoria, with an industrial designer as a mentor and AI coding tools. The log below is the whole story, newest first.</p>
 
                 <div class="contact-row">
                     <div class="contact-card">
                         <h3>Want to contribute?</h3>
-                        <p>Audio DSP, embedded Linux, small-batch electronics manufacturing, a first production run, or early testing. Or you just want one.</p>
+                        <p>Tell me how you think you can help, or what you want to work on together. The big one is getting a niche hardware launch right: supply chain, manufacturing and the first production run. Also audio DSP, embedded Linux, early testing, or you just want one.</p>
                         <a class="btn btn-primary" href="mailto:elvin@arbutus.audio">elvin@arbutus.audio</a>
                     </div>
                     <div class="contact-card" id="updates">
                         <h3>Milestone updates</h3>
-                        <p>A few emails a year, only when something real happens. No newsletter cadence, no marketing.</p>
+                        <p>A few emails a year, only when something cool happens. No newsletter cadence, no marketing.</p>
                         <!-- Formspree endpoint -->
                         <form class="signup" action="https://formspree.io/f/mgavyerz" method="POST">
                             <label class="visually-hidden" for="email">Email address</label>
