@@ -115,6 +115,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     box-shadow: var(--shadow);
 }
 .mission h2 { margin-bottom: 1.25rem; }
+.mission-sub { font-size: 1.25rem; margin: 1.75rem 0 0.75rem; }
 .pillars { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 1.5rem; margin: 1.5rem 0 1.75rem; }
 .pillars li { display: flex; gap: 0.9rem; align-items: flex-start; }
 .pillars h3 { font-size: 1.15rem; margin-bottom: 0.3rem; }
