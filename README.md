@@ -5,7 +5,7 @@ Static HTML, CSS and vanilla JavaScript, served by GitHub Pages from `main` at h
 
 ## Structure
 
-- `index.html`: the whole site. Hero, one-minute mission, contact and signup, then the development log newest first.
+- `index.html`: the whole site. Hero, story (who is building it, the OP-1 paragraph, what it lets you do, pillars, where it stands), the reserve block (refundable deposit, prototype ladder as the schedule, milestone signup), then the development log newest first.
 - `assets/css/styles.css`: three colour tokens at the top (`:root`): beige, brown, green, from the look-alike model. Everything else is a shade of those.
 - `assets/js/carousel.js`: carousels, lightbox and the signup form handler.
 - `assets/images/logo.svg`: the branch logo, converted from `logo.dxf`. Ring and branch in brown, leaves in green.
@@ -14,6 +14,10 @@ Static HTML, CSS and vanilla JavaScript, served by GitHub Pages from `main` at h
 ## Adding a log post
 
 Copy any `<article class="post">` block in `index.html`, change the date pill, title, slides and text, and place it at the top of the `#log` section. A carousel with one slide needs no prev/next buttons. Captions live in the `.caption` element under each image and are reused by the lightbox.
+
+## Reserve block
+
+The deposit button's `href` is a placeholder until a Stripe Payment Link exists; search for `data-payment-link`. `$[AMOUNT]` and the `[N] reserved so far` count are placeholders too.
 
 ## Signup form
 

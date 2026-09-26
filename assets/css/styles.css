@@ -104,6 +104,53 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     aspect-ratio: 4 / 3; object-fit: cover; width: 100%;
 }
 .hero-image figcaption { font-size: 0.95rem; color: var(--ink-soft); margin-top: 0.75rem; text-align: center; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+
+/* Intro: portrait beside the opening */
+.intro { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 2rem; align-items: start; margin-bottom: 0.5rem; }
+.portrait { margin: 0; }
+.portrait img { border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
+.portrait figcaption { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.6rem; text-align: center; }
+.intro-text h2 { margin-bottom: 1rem; }
+.intro-text p:last-child { margin-bottom: 0; }
+
+/* Reserve */
+.reserve { padding: 0 1.25rem 2rem; }
+.reserve-inner {
+    max-width: 1000px; margin: 0 auto;
+    background: var(--green);
+    color: var(--cap);
+    border-radius: var(--radius-xl);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    box-shadow: var(--shadow);
+}
+.reserve-inner h2, .reserve-inner h3 { color: var(--cap); }
+.reserve-inner h2 { margin-bottom: 0.75rem; }
+.reserve-lede { font-size: 1.2rem; max-width: 46em; margin-bottom: 2rem; }
+.reserve-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.deal, .schedule { background: rgba(252, 224, 167, 0.10); border-radius: var(--radius-lg); padding: 1.5rem; }
+.deal h3, .schedule h3 { margin-bottom: 0.75rem; }
+.deal ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.5rem; }
+.deal li { padding-left: 1.4rem; position: relative; font-size: 1.02rem; }
+.deal li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 10px; height: 10px; border-radius: 50%; background: var(--beige); }
+.btn-lg { padding: 0.9rem 1.7rem; font-size: 1.08rem; }
+.reserve-inner .btn-primary { background: var(--beige); color: var(--green); }
+.reserve-inner .btn-primary:hover { background: var(--cap); }
+.reserve-inner .btn-ghost { color: var(--cap); border-color: var(--cap); }
+.reserve-inner .btn-ghost:hover { background: rgba(252, 224, 167, 0.12); }
+.reserve-count { margin: 0.9rem 0 0; font-size: 0.95rem; color: var(--beige); }
+.schedule p { font-size: 1rem; color: var(--beige); }
+.ladder-mini { margin: 0.75rem 0 0; gap: 0.4rem; }
+.ladder-mini li { background: rgba(252, 224, 167, 0.12); color: var(--cap); font-size: 0.95rem; padding: 0.5rem 0.8rem; }
+.ladder-mini .rung { color: var(--cap); background: rgba(252, 224, 167, 0.18); }
+.ladder-mini .rung.done { color: var(--green); background: var(--beige); }
+.ladder-mini .rung.next { color: var(--cap); background: var(--orange); }
+.ladder-mini .status { color: var(--beige); }
+.reserve-inner .contact-row { margin-top: 1.5rem; }
+.reserve-inner .contact-card { background: rgba(252, 224, 167, 0.10); }
+.reserve-inner .contact-card p { color: var(--beige); }
+.reserve-inner .signup input { border-color: var(--beige); }
+.reserve-inner .signup-status { color: var(--beige); }
 
 /* Mission */
 .mission { padding: 3rem 1.25rem; }
@@ -263,14 +310,17 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     .hero { grid-template-columns: 1fr; gap: 1.75rem; padding-top: 2.25rem; }
     .hero-text { order: 2; }
     .hero-image { order: 1; }
-    .pillars, .contact-row { grid-template-columns: 1fr; }
+    .pillars, .contact-row, .reserve-grid { grid-template-columns: 1fr; }
+    .intro { grid-template-columns: 1fr; gap: 1.25rem; }
+    .portrait { max-width: 260px; }
 }
 @media (max-width: 600px) {
     body { font-size: 1.05rem; }
     .site-header { padding: 0.6rem 1rem; }
     .brand-name { font-size: 1rem; }
     .site-nav a { padding: 0.4rem 0.7rem; font-size: 0.95rem; }
-    .hero, .mission, .log { padding-left: 1rem; padding-right: 1rem; }
+    .hero, .mission, .log, .reserve { padding-left: 1rem; padding-right: 1rem; }
+    .reserve-inner { border-radius: var(--radius-lg); }
     .hero-image img { border-radius: var(--radius-lg); }
     .mission-inner { border-radius: var(--radius-lg); }
     .carousel { border-radius: var(--radius-lg); }
