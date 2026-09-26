@@ -140,12 +140,12 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .reserve-inner .btn-ghost:hover { background: rgba(252, 224, 167, 0.12); }
 .reserve-count { margin: 0.9rem 0 0; font-size: 0.95rem; color: var(--beige); }
 .schedule p { font-size: 1rem; color: var(--beige); }
-.ladder-mini { margin: 0.75rem 0 0; gap: 0.4rem; }
-.ladder-mini li { background: rgba(252, 224, 167, 0.12); color: var(--cap); font-size: 0.95rem; padding: 0.5rem 0.8rem; }
-.ladder-mini .rung { color: var(--cap); background: rgba(252, 224, 167, 0.18); }
-.ladder-mini .rung.done { color: var(--green); background: var(--beige); }
-.ladder-mini .rung.next { color: var(--cap); background: var(--orange); }
-.ladder-mini .status { color: var(--beige); }
+.reserve-inner .ladder-mini { margin: 0.75rem 0 0; gap: 0.4rem; }
+.reserve-inner .ladder-mini li { background: rgba(252, 224, 167, 0.12); color: var(--cap); font-size: 0.95rem; padding: 0.5rem 0.8rem; }
+.reserve-inner .ladder-mini .rung { color: var(--cap); background: rgba(252, 224, 167, 0.18); }
+.reserve-inner .ladder-mini .rung.done { color: var(--green); background: var(--beige); }
+.reserve-inner .ladder-mini .rung.next { color: var(--cap); background: var(--orange); }
+.reserve-inner .ladder-mini .status { color: var(--beige); }
 .reserve-inner .contact-row { margin-top: 1.5rem; }
 .reserve-inner .contact-card { background: rgba(252, 224, 167, 0.10); }
 .reserve-inner .contact-card p { color: var(--beige); }
