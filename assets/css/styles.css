@@ -116,6 +116,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Mission */
 .mission { padding: 3rem 1.25rem; }
+.mission + .mission { padding-top: 0; }
 .mission-inner {
     --card-pad: clamp(1.5rem, 4vw, 3rem);
     max-width: 860px; margin: 0 auto;

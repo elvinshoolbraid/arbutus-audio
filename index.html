@@ -37,16 +37,52 @@
         <section class="hero">
             <div class="hero-text">
                 <h1><span class="h1-lead">The Arbutus-1:</span> A music studio in your backpack.</h1>
-                <p class="lede">A portable synthesizer, sampler and eight-track recorder. A finished song in one box, wherever inspiration strikes. Easy to learn, impossible to outgrow, yours forever.</p>
+                <p class="lede">A portable sound-designer, sampler and eight-track recorder. Make a song from start to finish, wherever inspiration strikes. Easy to learn, impossible to outgrow, yours forever.</p>
                 <div class="hero-cta">
                     <a class="btn btn-primary" href="#story">Read the story</a>
                     <a class="btn btn-ghost" href="#updates">Keep me posted</a>
                 </div>
             </div>
             <figure class="hero-image">
-                <img src="assets/images/log/hero.jpg" alt="The Arbutus-1 look-alike model lying in grass: a beige keyboard with an orange-brown base and four coloured knobs" width="1500" height="1125" fetchpriority="high">
-                <figcaption>Look-alike model, September 2026. Printed PETG, no electronics inside yet.</figcaption>
+                <img src="assets/images/log/hero.jpg" alt="The Arbutus-1 look-alike model lying in grass: a beige keyboard with an orange-brown base and four coloured knobs" width="2000" height="1500" fetchpriority="high">
+                <figcaption>Look-alike model, September 2026. 3D Printed PETG, no electronics inside yet.</figcaption>
             </figure>
+        </section>
+
+        <!-- At a glance -->
+        <section class="mission" id="mission">
+            <div class="mission-inner">
+                <h2>At a glance</h2>
+
+                <ul class="pillars">
+                    <li>
+                        <span class="pillar-mark pillar-green"></span>
+                        <div>
+                            <h3>Approachable by design</h3>
+                            <p>The biggest barrier is intimidation, not skill. The functions are printed on the keys, the software tells you what it's doing, and holding HELP explains whatever you're touching. The learning ramp is built in: press a key and it makes sound, turn a knob and hear it change, hold shift and find the next layer. Easy to start, deep enough to never get bored.<br></p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="pillar-mark pillar-brown"></span>
+                        <div>
+                            <h3>Right-to-repair &amp; true ownership</h3>
+                            <p>Assembled with bolts, not glue. The schematics, print files and repair guides are published, spare parts are sold at fair prices, and the repair videos are clear enough for someone who has never opened a piece of electronics. The software is open, and you can install your own. Nothing you own should be caged by glue, or locked-down by patents.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="pillar-mark pillar-green"></span>
+                        <div>
+                            <h3>Community-driven &amp; built on trust</h3>
+                            <p>Open hardware and software. Synth engines, effects and sequencers are plugins anyone can write and share. If you want to improve the design, add a bigger screen, or a way to patch it into a modular rig, the files are yours and the ports are designed to be swapped. The best community work gets folded back into the base product; I can't build every idea, and I trust makers to run with it.<br></p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="pillar-mark pillar-brown"></span>
+                        <div>
+                            <h3>Affordable &amp; radically transparent</h3>
+                            <p>Off-the-shelf compute, small-batch circuit boards, a printed enclosure and efficient design, sold direct. The goal is to widen the number of people who can get their hands on serious music-making tools, and the target is under $500 CAD, reached over the first few batches. Every cost that goes into the price will be published on this page, parts and assembly included, with a fixed margin on top. You will see exactly what you are paying for, and the price will move with the cost.</p></div></li>
+                </ul>
+            </div>
         </section>
 
         <!-- Story -->
@@ -55,65 +91,24 @@
                 <div class="intro">
                     <figure class="portrait">
                         <img src="assets/images/elvin.jpg" alt="Elvin Shoolbraid" width="900" height="1200" loading="lazy">
-                        <figcaption>Elvin. Cortes Island, September 2026.</figcaption>
+                        <figcaption>Cortes Island, September 2026.</figcaption>
                     </figure>
                     <div class="intro-text">
-                        <h2>Hi, I'm Elvin.</h2>
-                        <p>I'm 21, in third year of mechanical engineering at the University of Victoria, from Salt Spring Island. I play bass and I make music. When I was 16 I bought a used OP-1 with my own money, and it taught me that a finished song doesn't need a studio: a keyboard, a synth, a sampler and a tape recorder in a box I could carry anywhere. Almost nobody I know who makes music could have bought one. And when something inside one breaks, or you want it to work differently, you can't do anything about it.</p>
-                        <p>Arbutus-1 is the thing I wish had existed when I was 16. If you've used a pocket studio before, you'll know where everything is. Everything else is different: the price, the bolts, the labels printed on the keys, the HELP key, and the fact that the files, the parts and the software belong to whoever owns one. If you don't like the reverb, change it. If the battery is tired in five years, replace it.</p>
+                        <h2>Hi, I'm Elvin:</h2>
+                        <p>I'm a 21 year old from Salt Spring Island, in third year of mechanical engineering at the University of Victoria. I love playing and making music. When I was 16 I bought a used OP-1 with my own money, and it showed me you can produce music without a music studio: a keyboard, a synth, a sampler and a tape recorder in a box I could carry anywhere. But almost nobody I know who makes music could have afforded one, and it's a delicate piece of equipment to risk bringing to the beach. And, when I wanted a different sound effect than the built-in ones, I was out of luck.</p>
+                        <p>Arbutus-1 is the thing I wish had existed when I was 16. If you've used an OP-1 before, you'll know the general format. Everything inside is different: the repair-first design, the intuitive text labels on the keys and display, and open source files, parts and software. If you don't like the reverb, change it. If the battery is tired in five years, replace it.</p>
                     </div>
                 </div>
 
                 <h3 class="mission-sub">Why I'm building it</h3>
-                <p>Making things is what makes us human, and it has never been easier to spend a whole life consuming instead. I want more people creating than scrolling, and music is the door I know. Everyone is a music maker. Some just don't know it yet, because the tools told them otherwise: too expensive, too cryptic, or too fragile to be worth the risk. None of that is a technical necessity. It is a set of choices, and I'd like to make different ones.</p>
-                <p>So this is for anyone who decided they weren't talented enough, when the tools were the problem. The kid who sings along to everything and can't dream of a laptop to make music on. The choir kid with a phone full of voice memos who has never heard of multitracking, because it comes tied to a computer. The person who bought the expensive one, felt dumb for a week, and put it on a shelf. The tinkerer who loves the idea of a studio in a box but can't stand that it dies if any one part goes.</p>
+                <p>Creating things is what makes us human, and it has never been easier to spend a whole life consuming instead. I want to encourage this to change, and music is the way I know. Everyone is a music maker, but some just don't believe it yet: they think the tools are too expensive, too complex to understand, or too fragile to be reliable. This can change.</p>
+                <p>I also want to democratise consumer electronics: I hate products designed to be hard to repair and impossible to upgrade, to achieve maximum value extraction and then be replaced. I'd rather build on trust; Give people the design files, the spare parts and a way to contribute, and see what the community gives back.<br></p>
 
                 <h3 class="mission-sub">What it lets you do</h3>
-                <p>Make a finished piece of music, start to finish, wherever you are. Record a beat, play a bassline over it, sample your voice through the built-in microphone, layer it on eight tracks, mix it, and put it on your phone. On the bus, in a tent, at a kitchen table, with nothing else in the bag. Press a key and it makes sound. Turn a knob and hear it change. Hold shift and find the next layer. Hold HELP and it tells you what you're touching. Easy to learn, and deep enough that you never run out.</p>
-
-                <h3 class="mission-sub">How I'm building it</h3>
-                <p>Five rules. They decide the product, and they will decide the company.</p>
-
-                <ul class="pillars">
-                    <li>
-                        <span class="pillar-mark pillar-green"></span>
-                        <div>
-                            <h3>The music comes first</h3>
-                            <p>Function over form. The machine gets out of the way: labels instead of riddles, a screen that says what it's doing, and a HELP key that explains whatever you're holding. It has a lot of capability, and it stops adding more at the point where more would cost you ease. The same keys that get you a sound in the first minute are the ones you'll be using in year five.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="pillar-mark pillar-brown"></span>
-                        <div>
-                            <h3>You stay in control</h3>
-                            <p>Bolts and one screw type, not glue. The schematics, the print files and the repair guides are published, spare parts are sold at fair prices, and the repair videos are clear enough for someone who has never opened a piece of electronics. The software is open, and you can install your own. Nothing you own should be caged by glue or by a licence agreement.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="pillar-mark pillar-green"></span>
-                        <div>
-                            <h3>Trust is earned, not cashed in</h3>
-                            <p>The price reflects what it costs to make, not what the market will bear. I'll publish the whole cost stack, parts and assembly and the rest, fix the margin, and let the price move with cost. Under $500 CAD is the aim, and I'll say so plainly if it slips. No lock-in, no dark patterns, and no marketing cadence: a few emails a year, only when something real happens.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="pillar-mark pillar-brown"></span>
-                        <div>
-                            <h3>Built together</h3>
-                            <p>Synth engines, effects and sequencers are plugins anyone can write and share, and the community's best work fills the default slots when a unit ships. If you want more knobs, a bigger screen, or a way to patch it into a modular rig, the ports are documented and designed to be built on. I can't build every idea, and I'd rather trust the people who own one to run with it. Until the first batch ships, this one is a promise.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="pillar-mark pillar-green"></span>
-                        <div>
-                            <h3>Real, one step at a time</h3>
-                            <p>Cheap prototypes, built in public. Each build answers one question and nothing ships until the last one is answered. A wrong prototype you can hold beats a right one you can't. The log below is the whole story, newest first, and it will stay that way: when something slips, you'll read it here first.</p>
-                        </div>
-                    </li>
-                </ul>
+                <p>Make a complete piece of music, start to finish, wherever you are; Sequence a beat, record a bass-line over it, sample your voice through the built-in microphone, add effects, layer it on eight tracks, mix it, and share it on your phone. On the bus, by the campfire, at a kitchen table, anywhere. Go from zero to hero; Press a key and it makes sound. Turn a knob and hear it change. Hold shift and find the next layer. Hold HELP and it tells you what you're touching. Easy to learn, and deep enough that you never run out.</p>
 
                 <h3 class="mission-sub">Where it stands</h3>
-                <p>One working circuit board, a look-alike model, and a playable emulator of the operating system. The next board is being designed now, in the gaps around a full course load. I'm one person, with an industrial designer as a mentor and AI coding tools. Preorders aren't open yet. When they are, they'll be fully refundable and the cost stack will be on this page beside the price.</p>
+                <p>One working circuit board, a look-alike model, and a playable emulator of the operating system. The next board is being designed now, in the gaps around a full course load. I'm one person, with encouraging mentors and AI coding tools. Preorders aren't open yet. When they are, they'll be fully refundable and the cost stack will be on this page beside the price.</p>
 
                 <div class="contact-row">
                     <div class="contact-card">
@@ -127,7 +122,7 @@
                         <!-- Formspree endpoint -->
                         <form class="signup" action="https://formspree.io/f/mgavyerz" method="POST">
                             <label class="visually-hidden" for="email">Email address</label>
-                            <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                            <input id="email" type="email" name="email" placeholder="you@example.com" required="" autocomplete="email">
                             <button class="btn btn-primary" type="submit">Keep me posted</button>
                             <p class="signup-status" aria-live="polite"></p>
                         </form>
