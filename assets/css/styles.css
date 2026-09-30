@@ -17,7 +17,7 @@
     --radius-md: 16px;
     --shadow: 0 10px 30px rgba(140, 60, 3, 0.14);
     --shadow-sm: 0 3px 10px rgba(140, 60, 3, 0.14);
-    --maxw: 1120px;
+    --maxw: 1232px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
