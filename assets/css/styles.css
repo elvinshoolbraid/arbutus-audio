@@ -117,10 +117,12 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* Mission */
 .mission { padding: 3rem 1.25rem; }
 .mission-inner {
+    --card-pad: clamp(1.5rem, 4vw, 3rem);
     max-width: 860px; margin: 0 auto;
     background: var(--cap);
-    border-radius: var(--radius-xl);
-    padding: clamp(1.5rem, 4vw, 3rem);
+    /* outer radius = inner radius + padding, so the border reads as one width around the corner */
+    border-radius: calc(var(--radius-lg) + var(--card-pad));
+    padding: var(--card-pad);
     box-shadow: var(--shadow);
 }
 .mission h2 { margin-bottom: 1.25rem; }
@@ -283,7 +285,6 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     .site-nav a { padding: 0.4rem 0.7rem; font-size: 0.95rem; }
     .hero, .mission, .log { padding-left: 1rem; padding-right: 1rem; }
     .hero-image img { border-radius: var(--radius-lg); }
-    .mission-inner { border-radius: var(--radius-lg); }
     .carousel { border-radius: var(--radius-lg); }
     .carousel-slide { padding: 0.6rem 0.6rem 0.25rem; }
     .carousel-slide img { max-height: 420px; border-radius: var(--radius-md); }
