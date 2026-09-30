@@ -22,7 +22,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+/* 110% = one Cmd+ step in Safari; rem sizes and the px containers below scale with it */
+html { font-size: 110%; scroll-behavior: smooth; scroll-padding-top: 96px; }
 [id] { scroll-margin-top: 88px; }
 
 body {
@@ -119,7 +120,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .mission + .mission { padding-top: 0; }
 .mission-inner {
     --card-pad: clamp(1.5rem, 4vw, 3rem);
-    max-width: 860px; margin: 0 auto;
+    max-width: 946px; margin: 0 auto;
     background: var(--cap);
     /* outer radius = inner radius + padding, so the border reads as one width around the corner */
     border-radius: calc(var(--radius-lg) + var(--card-pad));
@@ -163,7 +164,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .log { max-width: var(--maxw); margin: 0 auto; padding: 2rem 1.25rem 4rem; }
 .log-head { text-align: center; margin-bottom: 2.5rem; }
 .log-head p { color: var(--ink-soft); }
-.post { max-width: 900px; margin: 0 auto 3.5rem; }
+.post { max-width: 990px; margin: 0 auto 3.5rem; }
 .post-meta { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
 .date {
     font-weight: 500; color: var(--cap); background: var(--green);
@@ -171,7 +172,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .tag { font-weight: 500; color: var(--ink-soft); font-size: 0.9rem; }
 .post h3 { font-size: clamp(1.4rem, 2.6vw, 1.85rem); margin-bottom: 1rem; }
-.post-body { max-width: 760px; }
+.post-body { max-width: 836px; }
 .post-body p:last-child { margin-bottom: 0; }
 
 .ladder { list-style: none; margin: 1.25rem 0 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -204,7 +205,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     margin: 0 auto; border-radius: var(--radius-lg);
     cursor: zoom-in;
 }
-.caption { margin: 0.9rem auto 0.5rem; color: var(--ink-soft); font-size: 1rem; max-width: 640px; }
+.caption { margin: 0.9rem auto 0.5rem; color: var(--ink-soft); font-size: 1rem; max-width: 704px; }
 
 .carousel-btn {
     position: absolute; top: 50%; transform: translateY(-50%);
