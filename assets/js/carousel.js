@@ -1,4 +1,4 @@
-// Carousels, lightbox, and the signup form.
+// Carousels, lightbox, the signup form, and the mobile menu.
 
 class Carousel {
     constructor(element) {
@@ -173,10 +173,28 @@ function initSignup() {
     });
 }
 
+function initNav() {
+    const header = document.querySelector('.site-header');
+    const toggle = header && header.querySelector('.nav-toggle');
+    if (!toggle) return;
+    const setOpen = (open) => {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+    };
+    toggle.addEventListener('click', () => setOpen(!header.classList.contains('nav-open')));
+    header.querySelectorAll('.site-nav a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('click', (e) => { if (!header.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && header.classList.contains('nav-open')) { setOpen(false); toggle.focus(); }
+    });
+    window.matchMedia('(max-width: 680px)').addEventListener('change', (e) => { if (!e.matches) setOpen(false); });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.carousel').forEach(el => new Carousel(el));
     window.lightbox = new Lightbox();
     initSignup();
+    initNav();
 
     document.addEventListener('keydown', (e) => {
         if (window.lightbox.isOpen()) {

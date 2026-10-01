@@ -91,6 +91,25 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .site-nav a:hover { background: rgba(140, 60, 3, 0.10); color: var(--ink); text-decoration: none; }
 
+/* Hamburger: shown only when the nav no longer fits beside the brand */
+.nav-toggle {
+    display: none;
+    flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+    width: 44px; height: 44px;
+    border: 0; border-radius: 999px;
+    background: transparent; color: var(--ink);
+    cursor: pointer;
+}
+.nav-toggle:hover, .nav-toggle[aria-expanded="true"] { background: rgba(140, 60, 3, 0.10); }
+.nav-toggle span {
+    display: block; width: 20px; height: 2px; border-radius: 2px;
+    background: currentColor;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* Hero */
 .hero {
     max-width: var(--maxw); margin: 0 auto;
@@ -280,11 +299,33 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     .intro { grid-template-columns: 1fr; gap: 1.25rem; }
     .portrait { max-width: 260px; }
 }
+/* Below this width the brand and the three links crowd each other: links move into a
+   small card that drops from the hamburger, anchored to the header's right edge. */
+@media (max-width: 680px) {
+    .nav-toggle { display: flex; }
+    .site-nav {
+        position: absolute; top: calc(100% + 0.5rem); right: 1rem;
+        flex-direction: column; gap: 0.15rem;
+        min-width: 11rem; padding: 0.5rem;
+        background: var(--cap);
+        border: 1px solid rgba(140, 60, 3, 0.15);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow);
+        transform-origin: top right;
+        opacity: 0; visibility: hidden;
+        transform: translateY(-6px) scale(0.96);
+        transition: opacity 0.16s ease, transform 0.16s ease, visibility 0s linear 0.16s;
+    }
+    .site-header.nav-open .site-nav {
+        opacity: 1; visibility: visible; transform: none;
+        transition: opacity 0.16s ease, transform 0.16s ease;
+    }
+    .site-nav a { padding: 0.6rem 1rem; font-size: 1.05rem; color: var(--ink); }
+}
 @media (max-width: 600px) {
     body { font-size: 1.05rem; }
     .site-header { padding: 0.6rem 1rem; }
     .brand-name { font-size: 1rem; }
-    .site-nav a { padding: 0.4rem 0.7rem; font-size: 0.95rem; }
     .hero, .mission, .log { padding-left: 1rem; padding-right: 1rem; }
     .hero-image img { border-radius: var(--radius-lg); }
     .carousel { border-radius: var(--radius-lg); }
