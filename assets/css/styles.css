@@ -150,10 +150,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .mission-sub { font-size: 1.25rem; margin: 1.75rem 0 0.75rem; }
 .pillars { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 1.5rem; margin: 1.5rem 0 1.75rem; }
 .pillars li { display: flex; gap: 0.9rem; align-items: flex-start; }
-.pillars h3 { font-size: 1.4rem; margin-bottom: 0.3rem; color: var(--green); }
+.pillars h3 { font-size: 1.6rem; margin-bottom: 0.3rem; color: var(--green); }
 .pillars p { font-size: 1rem; margin-bottom: 0; color: var(--ink-soft); }
 /* dot centred on the h3's first line: (h3 line box - dot) / 2 */
-.pillar-mark { flex: 0 0 0.8rem; width: 0.8rem; height: 0.8rem; border-radius: 50%; margin-top: calc((1.4rem * 1.15 - 0.8rem) / 2); }
+.pillar-mark { flex: 0 0 0.8rem; width: 0.8rem; height: 0.8rem; border-radius: 50%; margin-top: calc((1.6rem * 1.15 - 0.8rem) / 2); }
 .pillar-green { background: var(--green); }
 .pillar-brown { background: var(--green); }
 
