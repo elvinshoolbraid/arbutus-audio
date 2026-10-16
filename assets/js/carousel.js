@@ -143,33 +143,17 @@ function initSignup() {
     const form = document.querySelector('.signup');
     if (!form) return;
     const status = form.querySelector('.signup-status');
-    const button = form.querySelector('button');
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (form.action.includes('YOUR_FORM_ID')) {
+    // The form posts to Buttondown in a new tab (no fetch: its CAPTCHA and error pages
+    // need a real page). This page only shows its own thank-you and clears the box.
+    form.addEventListener('submit', (e) => {
+        if (form.action.includes('BUTTONDOWN_USERNAME')) {
+            e.preventDefault();
             status.textContent = 'Signup is not wired up yet. Email elvin@arbutus.audio and you will be added by hand.';
             return;
         }
-        button.disabled = true;
-        status.textContent = 'Sending…';
-        try {
-            const res = await fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
-                form.reset();
-                status.textContent = 'Thanks. You will hear from me when something cool happens.';
-            } else {
-                status.textContent = 'That did not go through. Email elvin@arbutus.audio instead.';
-            }
-        } catch (err) {
-            status.textContent = 'That did not go through. Email elvin@arbutus.audio instead.';
-        } finally {
-            button.disabled = false;
-        }
+        status.textContent = 'Thanks. You will hear from me when something cool happens.';
+        setTimeout(() => form.reset(), 0);  // after the browser has read the field
     });
 }
 

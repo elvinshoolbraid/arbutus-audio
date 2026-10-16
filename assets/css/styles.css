@@ -178,6 +178,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     color: var(--ink);
 }
 .signup input:focus { outline: 3px solid rgba(140, 60, 3, 0.3); outline-offset: 1px; }
+.signup .signup-note { flex: 0 0 100%; margin: 0.1rem 0 0; font-size: 0.9rem; color: var(--ink-soft); }
 .signup-status { flex-basis: 100%; margin: 0.25rem 0 0; font-size: 0.95rem; color: var(--green); min-height: 1.2em; }
 
 /* Log */

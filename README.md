@@ -17,7 +17,7 @@ Copy any `<article class="post">` block in `index.html`, change the date pill, t
 
 ## Signup form
 
-The form posts to Formspree. Replace `YOUR_FORM_ID` in the form's `action` with the ID from formspree.io. Until then the form shows a note asking people to email instead.
+The form posts to Buttondown (`embed-subscribe`), as a plain form in a new tab: Buttondown asks that the endpoint not be called with `fetch`, because its CAPTCHA and error pages need a real page. Replace `BUTTONDOWN_USERNAME` in the form's `action` with the Buttondown username. Until then the form shows a note asking people to email instead.
 
 ## Local preview
 
