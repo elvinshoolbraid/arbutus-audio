@@ -1,6 +1,6 @@
 # arbutus.audio
 
-The public site for Arbutus-1, a portable synthesizer, sampler and 4-track recorder.
+The public site for Arbutus-1, a portable synthesizer, sampler and eight-track recorder.
 Static HTML, CSS and vanilla JavaScript, served by GitHub Pages from `main` at https://arbutus.audio.
 
 ## Structure
