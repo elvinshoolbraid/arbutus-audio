@@ -140,7 +140,10 @@
         <section class="mission" id="cost">
         <div class="mission-inner">
         <h2>What it costs, layer by layer</h2>
-        <p>The price is what the instrument costs me to make, plus a fixed C$100 margin. When a cost falls, the price falls; the margin stays the same. Here is the first batch, 25 instruments, layer by layer. Shipping is charged on top, at cost (about C$45 today).</p>
+        <p>The price is what the instrument costs me to make, plus a fixed C$100 margin. When a cost falls, the price falls; the margin stays the same. Here is the first batch, 25 instruments, layer by layer, and how the price falls as batches grow. Shipping is charged on top, at cost (about C$45 today).</p>
+        <div class="cost-charts">
+        <div class="cost-chart">
+        <h3>A batch of 25</h3>
         <p class="stack-total">C$598 <span>+ shipping</span></p>
         <div class="stack" role="img" aria-label="The price of one instrument in a batch of 25, C$598, as a stack of its layers">
         <div class="stack-layer" style="flex-grow:100.00"><span class="stack-seg" style="background:#e34948"></span><span class="stack-label">Margin <b>C$100</b></span></div>
@@ -151,7 +154,14 @@
         <div class="stack-layer" style="flex-grow:160.14"><span class="stack-seg" style="background:#1baf7a"></span><span class="stack-label">PCB <b>C$160</b></span></div>
         <div class="stack-layer" style="flex-grow:46.95"><span class="stack-seg" style="background:#2a78d6"></span><span class="stack-label">Raspberry Pi Zero 2 W + SD card <b>C$47</b></span></div>
         </div>
-        <p class="cost-date">Figures as of 15 October 2026, in Canadian dollars, for a batch that has not been made yet. They are today's best figures, not a price or a promise.</p>
+        </div>
+        <div class="cost-chart">
+        <h3>From 10 to 100 instruments</h3>
+        <p class="chart-sub">The price of one, by the size of the batch</p>
+        <svg class="curve" viewBox="0 0 420 470" role="img" aria-label="The price of one instrument by batch size: C$670 at 10, C$598 at 25, C$538 at 100"><line x1="40" x2="408" y1="430.0" y2="430.0" class="grid"/><text x="34" y="434.0" text-anchor="end">0</text><line x1="40" x2="408" y1="374.3" y2="374.3" class="grid"/><text x="34" y="378.3" text-anchor="end">100</text><line x1="40" x2="408" y1="318.6" y2="318.6" class="grid"/><text x="34" y="322.6" text-anchor="end">200</text><line x1="40" x2="408" y1="262.9" y2="262.9" class="grid"/><text x="34" y="266.9" text-anchor="end">300</text><line x1="40" x2="408" y1="207.1" y2="207.1" class="grid"/><text x="34" y="211.1" text-anchor="end">400</text><line x1="40" x2="408" y1="151.4" y2="151.4" class="grid"/><text x="34" y="155.4" text-anchor="end">500</text><line x1="40" x2="408" y1="95.7" y2="95.7" class="grid"/><text x="34" y="99.7" text-anchor="end">600</text><line x1="40" x2="408" y1="40.0" y2="40.0" class="grid"/><text x="34" y="44.0" text-anchor="end">700</text><text x="40.0" y="448" text-anchor="middle">10</text><text x="186.4" y="448" text-anchor="middle">25</text><text x="408.0" y="448" text-anchor="middle">100</text><text x="224.0" y="466" text-anchor="middle">instruments in the batch</text><path d="M40.0,403.8 C88.8,403.8 137.6,403.8 186.4,403.8 C260.3,403.8 334.1,403.8 408.0,403.8 L408.0,430.0 C334.1,430.0 260.3,430.0 186.4,430.0 C137.6,430.0 88.8,430.0 40.0,430.0 Z" fill="#2a78d6" class="band"/><path d="M40.0,286.3 C88.8,295.7 137.6,307.8 186.4,314.6 C260.3,324.9 334.1,330.1 408.0,337.9 L408.0,403.8 C334.1,403.8 260.3,403.8 186.4,403.8 C137.6,403.8 88.8,403.8 40.0,403.8 Z" fill="#1baf7a" class="band"/><path d="M40.0,245.6 C88.8,257.4 137.6,273.5 186.4,280.9 C260.3,292.0 334.1,296.5 408.0,304.3 L408.0,337.9 C334.1,330.1 260.3,324.9 186.4,314.6 C137.6,307.8 88.8,295.7 40.0,286.3 Z" fill="#eda100" class="band"/><path d="M40.0,207.1 C88.8,220.0 137.6,236.5 186.4,245.9 C260.3,260.2 334.1,267.7 408.0,278.6 L408.0,304.3 C334.1,296.5 260.3,292.0 186.4,280.9 C137.6,273.5 88.8,257.4 40.0,245.6 Z" fill="#e87ba4" class="band"/><path d="M40.0,134.7 C88.8,147.6 137.6,164.0 186.4,173.5 C260.3,187.7 334.1,195.2 408.0,206.1 L408.0,278.6 C334.1,267.7 260.3,260.2 186.4,245.9 C137.6,236.5 88.8,220.0 40.0,207.1 Z" fill="#008300" class="band"/><path d="M40.0,112.5 C88.8,125.9 137.6,142.8 186.4,152.5 C260.3,167.2 334.1,174.9 408.0,186.1 L408.0,206.1 C334.1,195.2 260.3,187.7 186.4,173.5 C137.6,164.0 88.8,147.6 40.0,134.7 Z" fill="#4a3aa7" class="band"/><path d="M40.0,56.8 C88.8,70.1 137.6,87.1 186.4,96.8 C260.3,111.5 334.1,119.2 408.0,130.4 L408.0,186.1 C334.1,174.9 260.3,167.2 186.4,152.5 C137.6,142.8 88.8,125.9 40.0,112.5 Z" fill="#e34948" class="band"/><path d="M40.0,56.8 C88.8,70.1 137.6,87.1 186.4,96.8 C260.3,111.5 334.1,119.2 408.0,130.4" class="price"/><circle cx="40.0" cy="56.8" r="4"/><text x="46.0" y="44.8" text-anchor="start" class="total">C$670</text><circle cx="186.4" cy="96.8" r="4"/><text x="186.4" y="84.8" text-anchor="middle" class="total">C$598</text><circle cx="408.0" cy="130.4" r="4"/><text x="408.0" y="118.4" text-anchor="end" class="total">C$538</text></svg>
+        </div>
+        </div>
+        <p class="cost-date">Figures as of 15 October 2026, in Canadian dollars, for a batch that has not been made yet. They are today's best figures, not a price or a promise. The curves between the batch sizes are drawn, not calculated.</p>
         </div>
         </section>
         <!-- cost-stack:end -->

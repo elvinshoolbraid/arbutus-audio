@@ -19,7 +19,7 @@ The `#cost` section of `index.html` (between the `cost-stack:begin` and `cost-st
 python3 tools/cost-stack.py ../Arbutus-1/docs/strategy/finance/cost-stack-public.md
 ```
 
-It rewrites only that section, from the file's tables and its "Prices as of" date, as one bar at a batch of 25. Every row of the tables must belong to a layer in `LAYERS` at the top of the script; a new row stops it with a message rather than vanishing from the bar. Check the price line in *Honestly priced* (the batch-of-25 figure) still matches.
+It rewrites only that section, from the file's tables and its "Prices as of" date, as one bar at a batch of 25 and a stacked chart across every batch size in the file. Every row of the tables must belong to a layer in `LAYERS` at the top of the script; a new row stops it with a message rather than vanishing from the bar. Check the price line in *Honestly priced* (the batch-of-25 figure) still matches.
 
 ## Adding a log post
 
