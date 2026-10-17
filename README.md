@@ -11,6 +11,16 @@ Static HTML, CSS and vanilla JavaScript, served by GitHub Pages from `main` at h
 - `assets/images/logo.svg`: the branch logo, converted from `logo.dxf`. Ring and branch in brown, leaves in green.
 - `assets/images/log/`: photos for the log, resized to 1600 px on the long edge. `r<N>.jpg` files came from the co-op bi-monthly report workbook, numbered by their order in it.
 
+## The cost stack
+
+The `#cost` section of `index.html` (between the `cost-stack:begin` and `cost-stack:end` markers) is generated; do not edit it by hand. In the Arbutus-1 repo, `python3 docs/strategy/finance/calc.py --public` writes `docs/strategy/finance/cost-stack-public.md`; then, here:
+
+```bash
+python3 tools/cost-stack.py ../Arbutus-1/docs/strategy/finance/cost-stack-public.md
+```
+
+It rewrites only that section, from the file's tables and its "Prices as of" date. Check the price line in *Honestly priced* (the batch-of-25 figure) still matches.
+
 ## Adding a log post
 
 Copy any `<article class="post">` block in `index.html`, change the date pill, title, slides and text, and place it at the top of the `#log` section. A carousel with one slide needs no prev/next buttons. Captions live in the `.caption` element under each image and are reused by the lightbox.
