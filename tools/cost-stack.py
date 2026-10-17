@@ -28,9 +28,9 @@ LAYERS = [
     ("Certification + safety testing (amortized over 100 units)", "#008300", ["Certification"]),
     ("Assembly + part taxes", "#e87ba4",
      ["Hand assembly", "Sales tax", "Units that fail", "The box", "Electronics recycling"]),
-    ("Batteries and plastics", "#eda100",
+    ("Batteries + plastics", "#eda100",
      ["Three rechargeable", "Keycaps", "The 3D-printed case", "Screws"]),
-    ("PCB", "#1baf7a",
+    ("PCB + components", "#1baf7a",
      ["The 52 key switches", "The parts on", "The bare circuit", "Soldering", "Shipping the boards"]),
     ("Raspberry Pi Zero 2 W + SD card", "#2a78d6", ["The computer"]),
 ]
@@ -123,7 +123,8 @@ def render(md):
     if BATCH not in sizes:
         sys.exit(f"cost-stack.py: no column for a batch of {BATCH} in the input")
     k = sizes.index(BATCH)
-    prices, ship = r.pop("The price"), r.pop("+ shipping to you, at cost")
+    prices = r.pop("The price")
+    r.pop("+ shipping to you, at cost")   # shown as "+ shipping", charged at cost
     r.pop("Cost of making it")
     sums = []                               # per layer, top first: [figure at each size]
     for label, _, prefixes in LAYERS:
@@ -136,15 +137,14 @@ def render(md):
             sys.exit(f"cost-stack.py: at {n} the layers add to {sum(s[j] for s in sums):.2f}, the price is {prices[j]:.2f}")
     total = round(prices[k])
     whole = rounded([s[k] for s in sums], total)
-    out = ['<section class="mission" id="cost">', '<div class="mission-inner">',
-           "<h2>What it costs, layer by layer</h2>",
-           "<p>The price is what the instrument costs me to make, plus a fixed C$100 margin. When a cost "
-           "falls, the price falls; the margin stays the same. Here is the first batch, 25 instruments, "
-           f"layer by layer, and how the price falls as batches grow. Shipping is charged on top, at cost "
-           f"(about C${round(ship[k])} today).</p>",
+    out = ['<section class="mission" id="pricing">', '<div class="mission-inner">',
+           "<h2>What it might cost, and why</h2>",
+           "<p>The price is what the instrument costs to make, plus a C$100 margin. When a cost falls, the "
+           f"price falls and you see it happen. This is the current estimate for the first batch of {BATCH} "
+           "units, layer by layer, and how the price falls as batches grow. Shipping is charged on top, at cost.</p>",
            '<div class="cost-charts">', '<div class="cost-chart">',
            f"<h3>A batch of {BATCH}</h3>",
-           f'<p class="stack-total">C${total} <span>+ shipping</span></p>',
+           f'<p class="stack-total">~C${total} <span>+ shipping</span></p>',
            f'<div class="stack" role="img" aria-label="The price of one instrument in a batch of {BATCH}, '
            f'C${total}, as a stack of its layers">']
     for (label, colour, _), v, w in zip(LAYERS, sums, whole):
@@ -157,7 +157,7 @@ def render(md):
             area_chart(sizes, [(c, v) for (_, c, _), v in zip(LAYERS[::-1], sums[::-1])], prices),
             "</div>", "</div>"]
     out.append(f'<p class="cost-date">Figures as of {d.day} {d:%B %Y}, in Canadian dollars, for a batch '
-               "that has not been made yet. They are today's best figures, not a price or a promise. "
+               "not yet produced. They are today's rough estimates, not a price or a promise. "
                "The curves between the batch sizes are drawn, not calculated.</p>")
     out += ["</div>", "</section>"]
     return "\n".join(out)

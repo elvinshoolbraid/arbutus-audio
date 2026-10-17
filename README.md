@@ -13,7 +13,7 @@ Static HTML, CSS and vanilla JavaScript, served by GitHub Pages from `main` at h
 
 ## The cost stack
 
-The `#cost` section of `index.html` (between the `cost-stack:begin` and `cost-stack:end` markers) is generated; do not edit it by hand. In the Arbutus-1 repo, `python3 docs/strategy/finance/calc.py --public` writes `docs/strategy/finance/cost-stack-public.md`; then, here:
+The `#pricing` section of `index.html` (between the `cost-stack:begin` and `cost-stack:end` markers) is generated; do not edit it by hand. In the Arbutus-1 repo, `python3 docs/strategy/finance/calc.py --public` writes `docs/strategy/finance/cost-stack-public.md`; then, here:
 
 ```bash
 python3 tools/cost-stack.py ../Arbutus-1/docs/strategy/finance/cost-stack-public.md

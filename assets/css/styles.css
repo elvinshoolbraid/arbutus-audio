@@ -23,8 +23,14 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* 110% = one Cmd+ step in Safari; rem sizes and the px containers below scale with it */
-html { font-size: 110%; scroll-behavior: smooth; scroll-padding-top: 96px; }
-[id] { scroll-margin-top: 88px; }
+html { font-size: 110%; scroll-behavior: smooth; }
+/* Anchor jumps: the target's visible content lands 1rem below the sticky header (--header-h: its
+   measured height). A section's own top padding is subtracted so the card, not the padding, lines up. */
+:root { --header-h: 78px; }
+[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
+.mission[id] { scroll-margin-top: calc(var(--header-h) + 1rem - 3rem); }
+.mission + .mission[id] { scroll-margin-top: calc(var(--header-h) + 1rem); }
+.log[id] { scroll-margin-top: calc(var(--header-h) + 1rem - 2rem); }
 
 body {
     font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -127,8 +133,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
 
 /* Intro: portrait beside the opening */
-.intro { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 2rem; align-items: start; margin-bottom: 0.5rem; }
-.portrait { margin: 0; }
+/* the photo floats left, so text past its bottom wraps under it; on a phone it sits above the text */
+.intro { display: flow-root; margin-bottom: 0.5rem; }
+.portrait { margin: 0; float: left; width: 220px; margin: 0 2rem 1rem 0; }
 .portrait img { border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
 .portrait figcaption { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.6rem; text-align: center; }
 .intro-text h2 { margin-bottom: 1rem; }
@@ -149,7 +156,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .mission h2 { margin-bottom: 1.25rem; }
 .mission-sub { font-size: 1.25rem; margin: 1.75rem 0 0.75rem; }
 
-/* Cost stack (#cost): one bar at a batch of 25, each layer's height its share of the price,
+/* Cost stack (#pricing): one bar at a batch of 25, each layer's height its share of the price,
    labelled beside it; a layer grows past its share only if its label needs the room */
 .cost-date { font-size: 0.9rem; color: var(--ink-soft); margin-top: 1rem; }
 .stack-total { font-size: 1.5rem; font-weight: 600; }
@@ -163,7 +170,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .stack-label b { font-weight: 600; white-space: nowrap; }
 /* the bar and the curves side by side; the curves drop below the bar on a narrow screen */
 .cost-charts { display: grid; grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); gap: 2.5rem; margin-top: 1.75rem; }
-#cost .cost-chart h3 { font-size: 1.1rem; margin: 0; }
+#pricing .cost-chart h3 { font-size: 1.1rem; margin: 0; }
 .cost-chart .stack-total { margin: 0.25rem 0 0.75rem; }
 .chart-sub { font-size: 1rem; color: var(--ink-soft); margin: 0.25rem 0 0.75rem; line-height: 2.1rem; }
 .curve { display: block; width: 100%; height: auto; overflow: visible; }
@@ -328,8 +335,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     .hero-text { order: 2; }
     .hero-image { order: 1; }
     .pillars, .contact-row { grid-template-columns: 1fr; }
-    .intro { grid-template-columns: 1fr; gap: 1.25rem; }
-    .portrait { max-width: 260px; }
+    .portrait { float: none; width: auto; max-width: 260px; margin: 0 0 1.25rem; }
 }
 /* Below this width the brand and the three links crowd each other: links move into a
    small card that drops from the hamburger, anchored to the header's right edge. */
@@ -357,6 +363,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 600px) {
     body { font-size: 1.05rem; }
     .site-header { padding: 0.6rem 1rem; }
+    :root { --header-h: 66px; }
     .brand-name { font-size: 1rem; }
     .hero, .mission, .log { padding-left: 1rem; padding-right: 1rem; }
     .hero-image img { border-radius: var(--radius-lg); }
