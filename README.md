@@ -9,6 +9,7 @@ Static HTML, CSS and vanilla JavaScript, served by GitHub Pages from `main` at h
 - `assets/css/styles.css`: three colour tokens at the top (`:root`): beige, brown, green, from the look-alike model. Everything else is a shade of those.
 - `assets/js/carousel.js`: carousels, lightbox and the signup form handler.
 - `assets/images/logo.svg`: the branch logo, converted from `logo.dxf`. Ring and branch in brown, leaves in green.
+- `assets/images/icon.svg`: the logo on a filled beige disc, for browser tabs, the address bar and search results. `favicon.ico` (16, 32, 48 px), `assets/images/icon-192.png` and `apple-touch-icon.png` (180 px, on a beige square) are rendered from it.
 - `assets/images/log/`: photos for the log, resized to 1600 px on the long edge. `r<N>.jpg` files came from the co-op bi-monthly report workbook, numbered by their order in it.
 
 ## The cost stack
