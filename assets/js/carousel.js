@@ -1,4 +1,4 @@
-// Carousels, lightbox, the signup form, and the mobile menu.
+// Carousels, lightbox, the signup form, the mobile menu, and the hero's 3D toggle.
 
 class Carousel {
     constructor(element) {
@@ -207,5 +207,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowLeft') Carousel.hovered.prevSlide();
             if (e.key === 'ArrowRight') Carousel.hovered.nextSlide();
         }
+    });
+});
+
+// Hero 3D toggle: the iframe is created on first click only, so the page never loads the capture
+// unasked; later clicks just flip between photo and 3D.
+document.querySelectorAll('.hero-media').forEach((media) => {
+    const btn = media.querySelector('.hero-3d');
+    btn.addEventListener('click', () => {
+        let frame = media.querySelector('iframe');
+        if (!frame) {
+            frame = document.createElement('iframe');
+            frame.src = media.dataset.embed;
+            frame.title = '3D capture of the look-alike model';
+            frame.allow = 'fullscreen; xr-spatial-tracking; accelerometer; gyroscope';
+            media.insertBefore(frame, btn);
+        }
+        const on = media.classList.toggle('is-3d');
+        frame.hidden = !on;
+        btn.setAttribute('aria-pressed', on);
+        btn.textContent = on ? '2D' : '3D';
+        btn.setAttribute('aria-label', on ? 'Show the photo' : 'Show a 3D capture of the look-alike model');
     });
 });
