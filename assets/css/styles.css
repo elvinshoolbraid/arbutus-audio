@@ -142,13 +142,15 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     position: absolute; z-index: 2;
     top: calc(var(--radius-xl) - var(--d) / 2); right: calc(var(--radius-xl) - var(--d) / 2);
     width: var(--d); height: var(--d); border-radius: 50%;
-    background: var(--cap); color: var(--green); border: 2px solid var(--green);
+    background: var(--green); color: var(--cap); border: 2px solid var(--green);
     font-family: inherit; font-size: 0.8rem; font-weight: 600; line-height: 1; letter-spacing: 0.02em;
     cursor: pointer; box-shadow: var(--shadow-sm);
     display: flex; align-items: center; justify-content: center;
     transition: background-color 0.2s, color 0.2s;
 }
-.hero-3d:hover, .hero-3d[aria-pressed="true"] { background: var(--green); color: var(--cap); }
+/* Filled green offers the 3D view; outlined (the 2D button, while 3D shows) goes back. Hover inverts. */
+.hero-3d:hover, .hero-3d[aria-pressed="true"] { background: var(--cap); color: var(--green); }
+.hero-3d[aria-pressed="true"]:hover { background: var(--green); color: var(--cap); }
 .hero-image figcaption { font-size: 0.95rem; color: var(--ink-soft); margin-top: 0.75rem; text-align: center; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
 
