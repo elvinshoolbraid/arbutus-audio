@@ -224,7 +224,6 @@ document.querySelectorAll('.hero-media').forEach((media) => {
             media.insertBefore(frame, btn);
         }
         const on = media.classList.toggle('is-3d');
-        frame.hidden = !on;
         btn.setAttribute('aria-pressed', on);
         btn.textContent = on ? '2D' : '3D';
         btn.setAttribute('aria-label', on ? 'Show the photo' : 'Show a 3D capture of the look-alike model');

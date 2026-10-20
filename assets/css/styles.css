@@ -136,7 +136,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     display: block; width: 100%; aspect-ratio: 4 / 3; border: 0;
     border-radius: var(--radius-xl); box-shadow: var(--shadow); background: var(--cap);
 }
-.hero-media.is-3d img { display: none; }
+.hero-media.is-3d img, .hero-media:not(.is-3d) iframe { display: none; }
 .hero-3d {
     --d: 40px;
     position: absolute; z-index: 2;
